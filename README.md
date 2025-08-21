@@ -16,3 +16,7 @@ A real-time drowsiness detection system using CNN to monitor driver alertness.
 5. Configure Twilio: Copy `send_alert_template.py` to `send_alert.py` and add your credentials
 6. Run: `python detect_drowsiness.py`
 
+## Team Details
+1. Adithya S
+2. Melkin S
+3. Nhowmitha S
