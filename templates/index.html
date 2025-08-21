@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drowsiness Detection System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #00adb5;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #019ca5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drowsiness Detection System</h1>
+    
+    <!-- Form to start detection -->
+    <form action="/start" method="POST">
+        <button type="submit">Start Detection</button>
+    </form>
+    
+    <!-- Video feed (only displayed after start detection) -->
+    {% if video_feed %}
+        <div>
+            <img src="{{ url_for('video_feed') }}" width="100%" />
+        </div>
+    {% endif %}
+</body>
+</html>
